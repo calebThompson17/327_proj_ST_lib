@@ -19,15 +19,23 @@ using namespace std;
 
 //derived class will set Nationality, iPerson.
 //iPerson is just a counter used to distinguish between objects of the same type
-Smalltalk::Smalltalk(string myNationality, int iPerson=1) { //use an initializer list here
+Smalltalk::Smalltalk(string myNationality, int iPerson /*=1*/) : //use an initializer list here
+		nationality(myNationality),
+		iPerson(iPerson),
+		mySmallTalk{},
+		current_phrase{0},
+		pWatch(nullptr)
+{}
+
 	//nationality(myNationality)
 //	const string Smalltalk::nationality=myNationality;
-	this->nationality=myNationality;
-	this->iPerson=iPerson;
-	vector<string> mySmallTalk;
-	current_phrase = 0;
-	unique_ptr<Watch> pWatch = 0;
-}
+
+
+//	this->nationality=myNationality;
+//	this->iPerson=iPerson;
+//	vector<string> mySmallTalk;
+//	current_phrase = 0;
+//	unique_ptr<Watch> pWatch = 0;
 
 
 Smalltalk::~Smalltalk(void){}
