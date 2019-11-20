@@ -1,6 +1,8 @@
 #include <string>
 #include <ctype.h>
 #include <vector>
+#include <string>
+#include <memory>
 
 #include "includes/Smalltalk.h"
 #include "includes/constants.h"
@@ -14,13 +16,13 @@
  */
 
 using namespace std;
-//using namespace Smalltalk;
 
 //derived class will set Nationality, iPerson.
 //iPerson is just a counter used to distinguish between objects of the same type
-Smalltalk::Smalltalk(string myNationality, int iPerson=1) {
+Smalltalk::Smalltalk(string myNationality, int iPerson=1) { //use an initializer list here
 	//nationality(myNationality)
-	const string Smalltalk::nationality=myNationality;
+//	const string Smalltalk::nationality=myNationality;
+	this->nationality=myNationality;
 	this->iPerson=iPerson;
 	vector<string> mySmallTalk;
 	current_phrase = 0;
@@ -36,7 +38,7 @@ Smalltalk::~Smalltalk(void){}
 //for instance the following string comes from an American instance, the 10th iPerson and it is printing AMERICAN_PHRASE_2
 //AMERICAN 10:Why yes, I would like to supersize that
 string Smalltalk::saySomething(){
-	string returnString = nationality + " " + iPerson + ":" + mySmallTalk[current_phrase];
+	string returnString = nationality + " " + to_string(iPerson) + ":" + mySmallTalk[current_phrase];
 	++current_phrase;
 	return returnString;
 }
@@ -54,7 +56,7 @@ string Smalltalk::getTime(){
 
 //if this object has a watch it is taken away, otherwise an empty unique_ptr is returned
 // This transaction simulates giving away a watch
-unique_ptr<Watch> SmallTalk::takeWatch(){
+unique_ptr<Watch> Smalltalk::takeWatch(){
 	unique_ptr<Watch> newWatch;
 	if (pWatch == 0) {
 		newWatch = 0;
