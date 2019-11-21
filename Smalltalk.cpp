@@ -4,6 +4,7 @@
  *  Created on: Nov 20, 2019
  *      Author: Caleb Thompson
  */
+
 #include <string>
 #include <ctype.h>
 #include <vector>
@@ -25,17 +26,6 @@ Smalltalk::Smalltalk(string myNationality, int iPerson /*=1*/) : //use an initia
 		current_phrase{0},
 		pWatch(nullptr)
 {}
-
-	//nationality(myNationality)
-//	const string Smalltalk::nationality=myNationality;
-
-
-//	this->nationality=myNationality;
-//	this->iPerson=iPerson;
-//	vector<string> mySmallTalk;
-//	current_phrase = 0;
-//	unique_ptr<Watch> pWatch = 0;
-
 
 Smalltalk::~Smalltalk(void){}
 
