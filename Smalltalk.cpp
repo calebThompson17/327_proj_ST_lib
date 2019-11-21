@@ -1,3 +1,9 @@
+/*
+ * Smalltalk.cpp
+ *
+ *  Created on: Nov 20, 2019
+ *      Author: Caleb Thompson
+ */
 #include <string>
 #include <ctype.h>
 #include <vector>
@@ -7,13 +13,6 @@
 #include "includes/Smalltalk.h"
 #include "includes/constants.h"
 #include "includes/Watch.h"
-
-/*
- * Smalltalk.cpp
- *
- *  Created on: Nov 20, 2019
- *      Author: Caleb Thompson
- */
 
 using namespace std;
 
