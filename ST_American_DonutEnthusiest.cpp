@@ -26,5 +26,3 @@ void ST_American_DonutEnthusiest::populatePhrases(){
 	mySmallTalk.push_back(AMERICAN_DE_PHRASE_4);
 	mySmallTalk.push_back(AMERICAN_DE_PHRASE_5);
 }
-
-

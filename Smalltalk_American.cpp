@@ -25,5 +25,3 @@ void Smalltalk_American::populatePhrases(){
 	mySmallTalk.push_back(AMERICAN_PHRASE_4);
 	mySmallTalk.push_back(AMERICAN_PHRASE_5);
 }
-
-

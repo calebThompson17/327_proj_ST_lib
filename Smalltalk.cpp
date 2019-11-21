@@ -19,7 +19,7 @@ using namespace std;
 
 //derived class will set Nationality, iPerson.
 //iPerson is just a counter used to distinguish between objects of the same type
-Smalltalk::Smalltalk(string myNationality, int iPerson /*=1*/) : //use an initializer list here
+Smalltalk::Smalltalk(string myNationality, int iPerson /*=1*/) :
 		nationality(myNationality),
 		iPerson(iPerson),
 		mySmallTalk{},
@@ -50,7 +50,6 @@ string Smalltalk::getTime(){
 	}
 	string returnString = THE_CURRENT_TIME_IS + pWatch->getTime();
 	return returnString;
-
 }
 
 //if this object has a watch it is taken away, otherwise an empty unique_ptr is returned
@@ -63,7 +62,6 @@ unique_ptr<Watch> Smalltalk::takeWatch(){
 		newWatch = move(pWatch);
 	}
 	return newWatch;
-
 }
 
 //if already have a watch then return false and dont change pWatch pointer
@@ -75,6 +73,3 @@ bool Smalltalk::giveWatch(unique_ptr<Watch> &pWatch){
 	this->pWatch = move(pWatch);
 	return true;
 }
-
-
-
