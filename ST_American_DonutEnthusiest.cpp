@@ -10,7 +10,7 @@
 
 ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i) {
 	Smalltalk_American(AMERICAN_DE, i);
-	Smalltalk_American::populatePhrases();
+	populatePhrases();
 }
 
 ST_American_DonutEnthusiest::~ST_American_DonutEnthusiest(void) {}

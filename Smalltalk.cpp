@@ -47,6 +47,8 @@ Smalltalk::~Smalltalk(void){}
 string Smalltalk::saySomething(){
 	string returnString = nationality + " " + to_string(iPerson) + ":" + mySmallTalk[current_phrase];
 	++current_phrase;
+	if (current_phrase >= mySmallTalk.size())
+		current_phrase = 0;
 	return returnString;
 }
 
